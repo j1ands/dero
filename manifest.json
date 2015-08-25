@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Delo Bot",
+  "description": "This extension auto-refreshes and adds yeezy",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "logo_hasbro.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],  
+  "content_scripts": [
+    {
+      "matches": ["http://www.derodeloper.com/*", "https://www.derodeloper.com/*", "http://derodeloper.com/*", "https://derodeloper.com/*", "https://pay.multisafepay.com/*"],
+      "js": ["myscript.js"]
+    }
+  ],
+  "web_accessible_resources": ["script.js", "jquery.min.js"]
+}
